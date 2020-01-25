@@ -1,0 +1,4 @@
+---
+title: "Analiza danych odnośnie oczekiwanej długości życia"
+output: html_notebook
+---
