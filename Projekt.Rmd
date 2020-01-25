@@ -6,6 +6,20 @@ output:
   html_notebook: default
   pdf_document: default
 ---
+Postanowiliśmy rozważyć jak PKB per capita wpływa na przewidywaną długość życia. Nasze rozważania oparliśmy o dane statystyczne ze strony https://databank.worldbank.org/ 
+Rozważymy dane pochodzące z kilku krajów. Wybrane kraje to: USA, Polska, Chiny, Indie, Brazylia, Nigeria, Australia. Wybór tych państw był podyktowany ich znaczeniem na arenie międzynarodowej, liczbą ludności, oraz pragnieniem uwzględnienia różnych rejonów świata.
+
+
+
+Źródło dla danych traktujących o przewidywanej długości życia:(1) United Nations Population Division. World Population Prospects: 2019 Revision, or derived from male and female life expectancy at birth from sources such as: (2) Census reports and other statistical publications from national statistical offices, (3) Eurostat: Demographic Statistics, (4) United Nations Statistical Division. Population and Vital Statistics Reprot (various years), (5) U.S. Census Bureau: International Database, and (6) Secretariat of the Pacific Community: Statistics and Demography Programme.
+Metodologia pomiaru: Przewidywana długośc życia w czasie narodzin jest tutaj średnią przewidywaną liczbą lat życia noworodka jeśli przewidywany wzór śmiertelności pozostanie taki sam w przyszłości.
+Odzwierciedla średnią wieku śmierci populacji i tworzy wzorzec śmiertelności, który przeważa we wszystkich grupach wiekowych w danym roku. Dlatego nie odzwierciedla wzoru umieralności, którego dana osoba faktycznie doświadczy podczas swojego życia.
+Wysoka śmiertelność w młodych grupach wiekowych znacznie obniża oczekiwaną długość życia. Jeśli jednak dana osoba przeżyje dzieciństwo, może żyć znacznie dłużej. Na przykład w populacji, której oczekiwana długość życia wynosi 50 lat, może być niewiele osób umierających w wieku 50 lat. Oczekiwana długość życia w chwili urodzenia może być niska ze względu na wysoką śmiertelność w dzieciństwie, tak że gdy osoba przeżyje swoje dzieciństwo, może żyć znacznie dłużej niż 50 lat.
+
+
+Źródło dla danych traktujących o produkcie krajowym brutto per capita: World Bank national accounts data, and OECD National Accounts data files.
+Produkt Krajowy Brutto per capita - to wskaźnik zamożności w przeliczeniu na jednego mieszkańca. Jest on obliczany jako PKB / liczbę mieszkańców państwa
+PKB opisuje zagregowaną wartość dóbr i usług finalnych wytworzonych przez narodowe i zagraniczne czynniki produkcji na terenie danego kraju w określonej jednostce czasu (najczęściej w ciągu roku). PKB jest miarą wielkości gospodarki.
 
 ```{R}
 LE <- read.csv("LE.csv")
