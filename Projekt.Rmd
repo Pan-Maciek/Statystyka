@@ -162,8 +162,7 @@ Współczynnik korelacji przewidywanych lat życia od PKB per capita w Australii
 
 ## Wnioski
 
-Dla wszystkich siedmiu wykresów przedstawiających zależność przewidywanych lat życia od PKB na mieszkańca współczynnik kierunkowy regresji liniowej przyjął wartość dodatnią. Wartym odnotowania jest także wysoki współczynnik R^2 wspomnianych regresji. Wskazuje to, że są one dobrze dopasowane. Może to sugerować, że przy zwiększaniu się PKB na mieszkańca danego kraju rośnie także oczekiwana długość życia. 
-
+Dla wszystkich siedmiu wykresów przedstawiających zależność przewidywanych lat życia od PKB na mieszkańca współczynnik kierunkowy regresji liniowej przyjął wartość dodatnią. Wartym odnotowania jest także wysoki współczynnik R^2 wspomnianych regresji (dla wszystkich państw poza Chinami współczynnik ten wynosi ponad 0.7). Wskazuje to, że są one dobrze dopasowane. Może to sugerować, że przy zwiększaniu się PKB na mieszkańca danego kraju rośnie także oczekiwana długość życia. 
 
 ### Źródła
 
