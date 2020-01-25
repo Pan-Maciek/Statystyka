@@ -57,13 +57,13 @@ Wykres przedstawia oczekiwaną długość życia na świecie w latach 1960 - 201
 Wykres pokazujący PKB per capita dla różnych krajów świata od roku 1960 do 2019. 
 =======
 ```{R}
-plot(gdp('USA'), main="PKB per capita w USA", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('AUT'), main="PKB per capita w Austrii", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('CHN'), main="PKB per capita w Chinach", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('IND'), main="PKB per capita w Indiach", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('BRA'), main="PKB per capita w Brazylii", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('NGA'), main="PKB per capita w Nigerii", xlab="Rok", ylab="PKB per capita w dolarach")
-plot(gdp('AUS'), main="PKB per capita w Australii", xlab="Rok", ylab="PKB per capita w dolarach")
+plot(gdp('USA'), main="PKB per capita w USA", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('AUT'), main="PKB per capita w Austrii", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('CHN'), main="PKB per capita w Chinach", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('IND'), main="PKB per capita w Indiach", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('BRA'), main="PKB per capita w Brazylii", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('NGA'), main="PKB per capita w Nigerii", xlab="Rok", ylab="PKB per capita w USD")
+plot(gdp('AUS'), main="PKB per capita w Australii", xlab="Rok", ylab="PKB per capita w USD")
 ```
 
 
@@ -88,31 +88,31 @@ plot(le('AUS'), main="Oczekiwana długość życia w Australii", xlab="Rok", yla
 
 ```{R}
 usa <- data('USA')
-plot(usa$le~usa$gdp, main="Zależność przewidywanych lat życia w USA od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(usa$le~usa$gdp, main="Zależność przewidywanych lat życia w USA od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( usa$le ~ usa$gdp ))
 
 aut <- data('AUT')
-plot(aut$le~aut$gdp, main="Zależność przewidywanych lat życia w Austrii od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(aut$le~aut$gdp, main="Zależność przewidywanych lat życia w Austrii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( aut$le ~ aut$gdp ))
 
 CHN <- data('CHN')
-plot(CHN$le~CHN$gdp, main="Zależność przewidywanych lat życia w Chinach od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(CHN$le~CHN$gdp, main="Zależność przewidywanych lat życia w Chinach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( CHN$le ~ CHN$gdp ))
 
 IND <- data('IND')
-plot(IND$le~IND$gdp, main="Zależność przewidywanych lat życia w Indiach od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(IND$le~IND$gdp, main="Zależność przewidywanych lat życia w Indiach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( IND$le ~ IND$gdp ))
 
 BRA <- data('BRA')
-plot(BRA$le~BRA$gdp, main="Zależność przewidywanych lat życia w Brazylii od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(BRA$le~BRA$gdp, main="Zależność przewidywanych lat życia w Brazylii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( BRA$le ~ BRA$gdp ))
 
 NGA <- data('NGA')
-plot(NGA$le~NGA$gdp, main="Zależność przewidywanych lat życia w Nigerii od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(NGA$le~NGA$gdp, main="Zależność przewidywanych lat życia w Nigerii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( NGA$le ~ NGA$gdp ))
 
 AUS <- data('AUS')
-plot(AUS$le~AUS$gdp, main="Zależność przewidywanych lat życia w Australii od PKB per capita", xlab="Dolarów", ylab="Przewidywana długość życia")
+plot(AUS$le~AUS$gdp, main="Zależność przewidywanych lat życia w Australii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( AUS$le ~ AUS$gdp ))
 
 
