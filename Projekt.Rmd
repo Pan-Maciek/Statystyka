@@ -1,4 +1,22 @@
 ---
 title: "Analiza danych odnośnie oczekiwanej długości życia"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
+  html_notebook: default
+  pdf_document: default
 ---
+
+```{R}
+LE <- read.csv("LE.csv")
+GDP <- read.csv("GDP.csv")
+```
+
+
+```{R}
+boxplot(LE[ -c(1:4) ])
+```
+
+```{R}
+Countries <- LE[LE$Country.Code %in% c('USA', 'POL', 'CHN', 'IND', 'BRA', 'NGA', 'AUS'),]
+```
