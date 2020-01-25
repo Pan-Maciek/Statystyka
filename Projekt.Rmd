@@ -1,10 +1,11 @@
 ---
 title: "Analiza danych odnośnie oczekiwanej długości życia"
 output:
-  html_document:
-    df_print: paged
+  word_document: default
   html_notebook: default
   pdf_document: default
+  html_document:
+    df_print: paged
 ---
 Postanowiliśmy rozważyć jak PKB per capita wpływa na przewidywaną długość życia. Nasze rozważania oparliśmy o dane statystyczne ze strony https://databank.worldbank.org/ 
 Rozważymy dane pochodzące z kilku krajów. Wybrane kraje to: USA, Polska, Chiny, Indie, Brazylia, Nigeria, Australia. Wybór tych państw był podyktowany ich znaczeniem na arenie międzynarodowej, liczbą ludności, oraz pragnieniem uwzględnienia różnych rejonów świata.
@@ -90,31 +91,37 @@ plot(le('AUS'), main="Oczekiwana długość życia w Australii", xlab="Rok", yla
 usa <- data('USA')
 plot(usa$le~usa$gdp, main="Zależność przewidywanych lat życia w USA od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( usa$le ~ usa$gdp ))
+summary(lm ( usa$le ~ usa$gdp ))
 
 aut <- data('AUT')
 plot(aut$le~aut$gdp, main="Zależność przewidywanych lat życia w Austrii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( aut$le ~ aut$gdp ))
+summary(lm ( aut$le ~ aut$gdp ))
 
 CHN <- data('CHN')
 plot(CHN$le~CHN$gdp, main="Zależność przewidywanych lat życia w Chinach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( CHN$le ~ CHN$gdp ))
+summary(lm ( CHN$le ~ CHN$gdp ))
 
 IND <- data('IND')
 plot(IND$le~IND$gdp, main="Zależność przewidywanych lat życia w Indiach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( IND$le ~ IND$gdp ))
+summary(lm ( IND$le ~ IND$gdp ))
 
 BRA <- data('BRA')
 plot(BRA$le~BRA$gdp, main="Zależność przewidywanych lat życia w Brazylii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( BRA$le ~ BRA$gdp ))
+summary(lm ( BRA$le ~ BRA$gdp ))
 
 NGA <- data('NGA')
 plot(NGA$le~NGA$gdp, main="Zależność przewidywanych lat życia w Nigerii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( NGA$le ~ NGA$gdp ))
+summary(lm ( NGA$le ~ NGA$gdp ))
 
 AUS <- data('AUS')
 plot(AUS$le~AUS$gdp, main="Zależność przewidywanych lat życia w Australii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( AUS$le ~ AUS$gdp ))
-
+summary(lm ( AUS$le ~ AUS$gdp ))
 
 ```
 
