@@ -27,11 +27,25 @@ LE <- read.csv("LE.csv")
 GDP <- read.csv("GDP.csv")
 Countries <- LE[LE$Country.Code %in% c('USA', 'POL', 'CHN', 'IND', 'BRA', 'NGA', 'AUS'),]
 
+le <- function(country_code) {
+  rok <- 1960:2019
+  le <- as.numeric(LE[LE$Country.Code == country_code,][-c(1:4)][1:60])
+  data.frame(rok, le)
+}
+
 gdp <- function(country_code) {
   rok <- 1960:2019
-  dane <- as.numeric(LE[LE$Country.Code == country_code,][-c(1:4)][1:60])
-  data.frame(rok, dane)
+  gdp <- as.numeric(GDP[GDP$Country.Code == country_code,][-c(1:4)][1:60])
+  data.frame(rok, gdp)
 }
+
+data <- function(country_code) {
+  rok <- 1960:2019
+  le <- as.numeric(LE[LE$Country.Code == country_code,][-c(1:4)][1:60])
+  gdp <- as.numeric(GDP[GDP$Country.Code == country_code,][-c(1:4)][1:60])
+  data.frame(rok, gdp, le)
+}
+
 ```
 
 
