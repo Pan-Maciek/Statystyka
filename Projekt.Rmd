@@ -25,7 +25,7 @@ PKB opisuje zagregowaną wartość dóbr i usług finalnych wytworzonych przez n
 # Loading data
 LE <- read.csv("LE.csv")
 GDP <- read.csv("GDP.csv")
-Countries <- LE[LE$Country.Code %in% c('USA', 'POL', 'CHN', 'IND', 'BRA', 'NGA', 'AUS'),]
+Countries <- c('USA', 'DEU', 'CHN', 'IND', 'BRA', 'NGA', 'AUS')
 
 le <- function(country_code) {
   rok <- 1960:2019
