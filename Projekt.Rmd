@@ -53,9 +53,19 @@ data <- function(country_code) {
 boxplot(LE[ -c(1:4) ])
 ```
 Wykres przedstawia oczekiwaną długość życia na świecie w latach 1960 - 2018. Oczekiwana długość życia w danym roku przedstawiona jest za pomocą wykresu pudełkowego. Widoczny jest wyraźny trend rosnący. Interesujące wydają się lata 80-te i 90-te, gdzie z wykresu odczytać można wyraźne wartości odstające. "Dołek" z lat 70-tych to oczekiwana długość życia w Kambodży pod rządami Pol Pota (1975 - 1979), natomiast w latach 90-tych widać oczekiwaną długość życia w Rwandzie obniżoną w stosunku do lat poprzednich z powodu ludobójstwa, które miało miejsce w tym kraju w roku 1994. 
+
+Wykres pokazujący PKB per capita dla różnych krajów świata od roku 1960 do 2019. 
+=======
 ```{R}
-plot(gdp('USA'))
+plot(gdp('USA'), main="PKB per capita w USA", xlab="Rok", ylab="Dolarów")
+plot(gdp('AUT'), main="PKB per capita w Austrii", xlab="Rok", ylab="Dolarów")
+plot(gdp('CHN'), main="PKB per capita w Chinach", xlab="Rok", ylab="Dolarów")
+plot(gdp('IND'), main="PKB per capita w Indiach", xlab="Rok", ylab="Dolarów")
+plot(gdp('BRA'), main="PKB per capita w Brazylii", xlab="Rok", ylab="")
+plot(gdp('NGA'), main="PKB per capita w Nigerii", xlab="Rok", ylab="Dolarów")
+plot(gdp('AUS'), main="PKB per capita w Australii", xlab="Rok", ylab="Dolarów")
 ```
+
 
 ```{R}
 usa <- data('USA')
