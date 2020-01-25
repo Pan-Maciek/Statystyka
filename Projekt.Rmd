@@ -71,31 +71,17 @@ Poniższe wykresy przedstawiają oczekiwane długości życia w wybranych państ
 
 ```{R}
 plot(le('USA'), main="Oczekiwana długość życia w USA", xlab="Rok", ylab="Lata")
-```
 
-
-```{R}
 plot(le('AUT'), main="Oczekiwana długość życia w Austrii", xlab="Rok", ylab="Lata")
-```
 
-
-```{R}
 plot(le('CHN'), main="Oczekiwana długość życia w Chinach", xlab="Rok", ylab="Lata")
-```
 
-```{R}
 plot(le('IND'), main="Oczekiwana długość życia w Indiach", xlab="Rok", ylab="Lata")
-```
 
-```{R}
 plot(le('BRA'), main="Oczekiwana długość życia w Brazylii", xlab="Rok", ylab="Lata")
-```
 
-```{R}
 plot(le('NGA'), main="Oczekiwana długość życia w Nigerii", xlab="Rok", ylab="Lata")
-```
 
-```{R}
 plot(le('AUS'), main="Oczekiwana długość życia w Australii", xlab="Rok", ylab="Lata")
 ```
 
