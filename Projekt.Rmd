@@ -56,3 +56,8 @@ Wykres przedstawia oczekiwaną długość życia na świecie w latach 1960 - 201
 ```{R}
 plot(gdp('USA'))
 ```
+
+```{R}
+plot(usa$le~usa$gdp)
+abline(lm ( usa$le ~ usa$gdp ))
+```
