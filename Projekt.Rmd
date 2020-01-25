@@ -92,79 +92,80 @@ plot(le('AUS'), main="Oczekiwana długość życia w Australii", xlab="Rok", yla
 usa <- data('USA')
 plot(usa$le~usa$gdp, main="Zależność przewidywanych lat życia w USA od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( usa$le ~ usa$gdp ))
-
-
-
+cor(usa$gdp,usa$le, use="complete.obs")
+summary(lm ( usa$le ~ usa$gdp ))
 ```
 
  
 Współczynnik korelacji przewidywanych lat życia w USA od PKB per capita dla USA
 
 ```{R}
-cor(usa$gdp,usa$le, use="complete.obs")
 aut <- data('AUT')
 plot(aut$le~aut$gdp, main="Zależność przewidywanych lat życia w Austrii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( aut$le ~ aut$gdp ))
+cor(aut$gdp,aut$le, use="complete.obs")
+summary(lm ( aut$le ~ aut$gdp ))
 ``` 
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Austrii
 
 ```{R}
-cor(aut$gdp,aut$le, use="complete.obs")
 CHN <- data('CHN')
 plot(CHN$le~CHN$gdp, main="Zależność przewidywanych lat życia w Chinach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( CHN$le ~ CHN$gdp ))
+cor(CHN$gdp,CHN$le, use="complete.obs")
+summary(lm ( aut$le ~ aut$gdp ))
 ```
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Chinach
 
 ```{R}
-cor(CHN$gdp,CHN$le, use="complete.obs")
 IND <- data('IND')
 plot(IND$le~IND$gdp, main="Zależność przewidywanych lat życia w Indiach od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( IND$le ~ IND$gdp ))
+cor(IND$gdp,IND$le, use="complete.obs")
+summary(lm ( IND$le ~ IND$gdp ))
 ```
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Indiach
 
 ```{R}
-cor(IND$gdp,IND$le, use="complete.obs")
 BRA <- data('BRA')
 plot(BRA$le~BRA$gdp, main="Zależność przewidywanych lat życia w Brazylii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( BRA$le ~ BRA$gdp ))
+cor(BRA$gdp,BRA$le, use="complete.obs")
+summary(lm ( BRA$le ~ BRA$gdp ))
 ```
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Brazylii
 
 ```{R}
-cor(BRA$gdp,BRA$le, use="complete.obs")
 NGA <- data('NGA')
 plot(NGA$le~NGA$gdp, main="Zależność przewidywanych lat życia w Nigerii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( NGA$le ~ NGA$gdp ))
+cor(NGA$gdp,NGA$le, use="complete.obs")
+summary(lm ( NGA$le ~ NGA$gdp ))
 ```
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Nigerii
 
 ```{R}
-cor(NGA$gdp,NGA$le, use="complete.obs")
 AUS <- data('AUS')
 plot(AUS$le~AUS$gdp, main="Zależność przewidywanych lat życia w Australii od PKB per capita", xlab="USD", ylab="Przewidywana długość życia")
 abline(lm ( AUS$le ~ AUS$gdp ))
+cor(AUS$le, AUS$gdp, use="complete.obs")
+summary(lm ( AUS$le ~ AUS$gdp ))
 ```
 
 Współczynnik korelacji przewidywanych lat życia od PKB per capita w Australii
 
-```{R}
-cor(AUS$le, AUS$gdp, use="complete.obs")
-```
 
-
-Wnioski
+## Wnioski
 
 Dla wszystkich siedmiu wykresów przedstawiających zależność przewidywanych lat życia od PKB na mieszkańca współczynnik kierunkowy regresji liniowej przyjął wartość dodatnią. Wartym odnotowania jest także wysoki współczynnik R^2 wspomnianych regresji. Wskazuje to, że są one dobrze dopasowane. Może to sugerować, że przy zwiększaniu się PKB na mieszkańca danego kraju rośnie także oczekiwana długość życia. 
 
 
-Źródła
+### Źródła
 
 Źródło dla danych traktujących o przewidywanej długości życia:
 https://data.worldbank.org/indicator/SP.DYN.LE00.IN
