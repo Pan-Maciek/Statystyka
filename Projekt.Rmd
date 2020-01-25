@@ -22,8 +22,16 @@ Produkt Krajowy Brutto per capita - to wskaźnik zamożności w przeliczeniu na 
 PKB opisuje zagregowaną wartość dóbr i usług finalnych wytworzonych przez narodowe i zagraniczne czynniki produkcji na terenie danego kraju w określonej jednostce czasu (najczęściej w ciągu roku). PKB jest miarą wielkości gospodarki.
 
 ```{R}
+# Loading data
 LE <- read.csv("LE.csv")
 GDP <- read.csv("GDP.csv")
+Countries <- LE[LE$Country.Code %in% c('USA', 'POL', 'CHN', 'IND', 'BRA', 'NGA', 'AUS'),]
+
+gdp <- function(country_code) {
+  rok <- 1960:2019
+  dane <- as.numeric(LE[LE$Country.Code == country_code,][-c(1:4)][1:60])
+  data.frame(rok, dane)
+}
 ```
 
 
@@ -32,5 +40,5 @@ boxplot(LE[ -c(1:4) ])
 ```
 
 ```{R}
-Countries <- LE[LE$Country.Code %in% c('USA', 'POL', 'CHN', 'IND', 'BRA', 'NGA', 'AUS'),]
+plot(gdp('USA'))
 ```
