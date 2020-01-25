@@ -58,6 +58,7 @@ plot(gdp('USA'))
 ```
 
 ```{R}
+usa <- data('USA')
 plot(usa$le~usa$gdp)
 abline(lm ( usa$le ~ usa$gdp ))
 ```
